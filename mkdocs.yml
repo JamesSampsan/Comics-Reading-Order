@@ -1,6 +1,10 @@
 site_name: Comics Reaing Order
+nav:
+  - Home: index.md
+  - About: about.md
 theme: 
   name: material
+  language: en
   features:
     - content.code.annotate
     - content.code.copy
@@ -16,9 +20,13 @@ theme:
     - search.highlight
     - search.share
     - search.suggest
-  palette:
 
-      # Palette toggle for dark mode
+  plugins:
+   - typeset
+   - search
+
+  palette:
+     # Palette toggle for dark mode
     - scheme: slate
       primary: black # website default should already be in dark mode so this color should be set to a black color
       accent: deep orange # this changes the color of links when you hover over them
@@ -34,11 +42,16 @@ theme:
         icon: material/weather-sunny
         name: Switch to dark mode 
 
-
-
+markdown_extensions:
+   - admonition #these are info boxes that are colored, with name, and icon, that can be expanded/collapsable
+   - pymdownx.details
+   - pymdownx.superfences
+   - toc:
+      permalink: true
 
 
 
 
 
 #look at 17:30 in https://www.youtube.com/watch?v=NY7DHvo1XVM to see how to use custom navigation
+ # cloudflare pages to host the website just like pvme and kenharris.io 20 minute mark in previous link
